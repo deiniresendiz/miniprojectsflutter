@@ -8,6 +8,10 @@ class RegsiterFromProvider extends ChangeNotifier {
   String name = '';
 
   validateFrom() {
-    formKey.currentState!.validate();
+    if (formKey.currentState!.validate()) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
